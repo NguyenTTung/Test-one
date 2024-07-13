@@ -1,0 +1,24 @@
+<div class="shadow-lg rounded-lg overflow-hidden mx-4 md:mx-10">
+    <a class="bg-green-500 text-white text-2xl font-medium px-4 py-2 rounded shadow" routerLink="/themdanhmuc" >test them danh mục</a>
+    <table class="w-full table-fixed mt-4">
+        <thead>
+            <tr class="bg-gray-100">
+                <th class="w-1/4 py-4 px-6 text-left text-gray-600 font-bold uppercase">Name</th>
+                <th class="w-1/4 py-4 px-6 text-left text-gray-600 font-bold uppercase">Sửa</th>
+
+            </tr>
+            
+        </thead>
+        <tbody class="bg-white">
+            <tr *ngFor="let item of listcate">                
+                <td class="py-4 px-6 border-b border-gray-200">{{item.name}}</td> 
+                <td class="py-4 px-6 border-b border-gray-200">
+                    <a class=" text-yellow-500" [routerLink]="['/suadanhmuc' , item.id]" >Sửa</a> 
+                </td> 
+
+            </tr>
+
+            <!-- Add more rows here -->
+        </tbody>
+    </table>
+</div>
